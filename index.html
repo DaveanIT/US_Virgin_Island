@@ -17,6 +17,7 @@
 	<style>
 		.form-select{
 			width: 50%;
+    		margin-left: 15px;
 		}
 		body {
 			margin-top: 20px;
@@ -97,6 +98,7 @@
 
 		.form-control {
 			margin-right: 5px;
+    		margin-left: 15px;
 			/* Space between elements */
 		}
 
@@ -322,6 +324,7 @@
     padding: 0.5rem;
     border: 1px solid #ddd;
     border-radius: 4px;
+	width: 80%;
 }
 
 .col-md-3{
@@ -409,6 +412,39 @@ hr {
             margin-left: 5px;
             margin-right: 5px;
         }
+
+		/* Status bar container */
+		.status-bar {
+            width: 100%;
+            height: 30px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .status-bar-item {
+            display: inline-block;
+            height: 100%;
+            padding: 0 10px;
+            text-align: center;
+            line-height: 30px;
+            color: #666;
+            border-right: 1px solid #ddd;
+        }
+
+        .status-bar-item.active {
+            background-color: #4CAF50; /* Green color for the active status */
+            color: #fff;
+        }
+
+		.expandable{
+			font-size: 13px;
+		}
+
+		.colmn{
+			width: 90%;
+		}
+
 </style>
 </head>
 
@@ -471,7 +507,158 @@ hr {
 
 					</div>
 					<div class="filter-content collapse" id="collapse_opt">
-					tedct
+						<div class="container mt-5">
+							<div class="row mb-3">
+								<div class="col"></div>
+								<div class="col">
+
+									<form class="card" style="width: 800px; height: 600px; background: #ebf3ff; padding: 15px;">
+										<div class="row mb-2">
+											<div class="col">
+												<input type="checkbox" class="me-2">
+												<span class="expandable" >Act</span>
+												<input type="checkbox" class="me-2">
+												<span class="expandable">Resolution</span>
+											</div>
+											<div class="row mb-2 mt-2">
+												<select class="form-select expandable">
+													<option selected>Legislature</option>
+													<option >35 2021-2023</option>
+												</select>
+											</div>
+											<div class="row mb-2">
+												<!-- <label for="">Committee</label> -->
+												<input type="text" class="form-control expandable" placeholder="Subject">
+											</div>
+										</div>
+										<h6 class="expandable">Sponsor/Co-Sponsor</h6>
+										<div class="row mb-2">
+											<div class="col">
+												<input type="checkbox" class="me-2 expandable">
+												<span class="expandable">Sponsor</span>
+												<input type="checkbox" class="me-2 expandable">
+												<span class="expandable">Co-Sponsor</span>
+											</div>
+											<div class="col">
+												<span class="expandable">Committee</span>
+											</div>
+											</div>
+											
+											<div class="row mb-2">
+												<div class="col">
+													<input type="text" class="form-control expandable" >
+												</div>
+												<div class="col">
+													<input type="text" class="form-control expandable" placeholder="Committee">
+												</div>
+											</div>
+											
+											<div class="row mb-2">
+												<div class="col">
+													<h6 class="expandable">Date</h6>
+												</div>
+												<div class="col">
+													<h6 class="expandable">Legislature Numbers</h6>
+												</div>
+											</div>
+											
+											<div class="row mb-2">
+												<div class="col">
+													<input type="checkbox" class="me-2">
+													<span class="expandable">Approved</span>
+													<input type="checkbox" class="me-2">
+													<span class="expandable">Voted</span>
+													<input type="checkbox" class="me-2">
+													<span class="expandable" >Overwritten</span>
+												</div>
+												<div class="col">
+													<input type="checkbox" class="me-2">
+													<span class="expandable">Bill Number</span>
+													<input type="checkbox" class="me-2">
+													<span class="expandable">Act Number</span>
+													<input type="checkbox" class="me-2">
+													<span class="expandable">BR Number</span>
+												</div>
+											</div>
+											<div class="row mb-2">
+												<div class="col">
+													<div class="filter-inputs">
+														<span class="filter-label row2btn expandable">Date</span>
+		
+															<input class="form-control row2btn expandable" type="date" placeholder="Start Date">
+															<span class="filter-between row2btn expandable">Between</span>
+															<input class="form-control row2btn expandable" type="date" placeholder="End Date">
+														</div>
+												</div>
+												<div class="col">
+													<div class="col">
+														<input type="text" class="form-control expandable" placeholder="">
+													</div>
+												</div>
+											</div>
+											<div class="row mb-2">
+												<div class="col">
+													<input type="checkbox" class="me-2">
+													<span class="expandable">Assigned</span>
+													<input type="checkbox" class="me-2">
+													<span class="expandable">Introduced</span>
+												</div>
+												<div class="col">
+													<input type="checkbox" class="me-2">
+													<span class="expandable">Resolution No.</span>
+													<input type="checkbox" class="me-2">
+													<span class="expandable">Ammendment No.</span>
+													<input type="checkbox" class="me-2">
+													<span class="expandable" >Governors No.</span>
+												</div>
+											</div>
+											<div class="row mb-2">
+												<div class="col">
+													<div class="filter-inputs">
+														<span class="filter-label row2btn expandable">Date</span>
+		
+															<input class="form-control row2btn expandable" type="date" placeholder="Start Date">
+															<span class="filter-between row2btn expandable">Between</span>
+															<input class="form-control row2btn expandable" type="date" placeholder="End Date">
+														</div>
+												</div>
+												<div class="col">
+													<div class="col">
+														<input type="text" class="form-control expandable" placeholder="">
+													</div>
+												</div>
+											</div>
+											<div class="row mb-2"></div>
+												<div class="col">
+													<input type="checkbox" class="me-2 expandable">
+													<span class="expandable">To Senator</span>
+													<input type="checkbox" class="me-2 expandable">
+													<span class="expandable">To Governor</span>
+													<input type="checkbox" class="me-2 expandable">
+													<span class="expandable" >To Lt. Governor</span>
+												</div>
+												<div class="row mb-2">
+													<div class="col">
+														<div class="filter-inputs">
+															<span class="filter-label row2btn">Date</span>
+			
+																<input class="form-control row2btn expandable" type="date" placeholder="Start Date">
+																<span class="filter-between row2btn expandable">Between</span>
+																<input class="form-control row2btn expandable" type="date" placeholder="End Date">
+															</div>
+													</div>
+													<div class="col">
+														<div class="col">
+															<button type="reset" class="btn btn-secondary">Reset Form</button>					
+															<button type="submit" class="btn btn-primary">Search</button>
+														</div>
+													</div>
+												</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					
 					</div>
 
 				</div>
@@ -517,203 +704,217 @@ hr {
 			</div>
 		</div>
 	</div>
-	<div class="main">
-		<section class="section-content padding-y pt-4">
-			<div class="container">
-	
-				<div class="row">
-					<!-- Sidebar for Filters with Toggle Features -->
-					<aside class="col-md-3">
-						<div class="card">
-							<h6 class="title text-center">Limit your search</h6>
-
-							<article class="filter-group">
-								<header class="card-header">
-									<a href="#" class=" " data-bs-toggle="collapse" data-bs-target="#collapse_1" aria-expanded="true">
-										<i class="icon-control fa fa-chevron-down">-</i>
-										<h6 class="title">Dates</h6>
-									</a>
-								</header>
-								<div class="filter-content collapse show" id="collapse_1">
-									<div class="card-body">
-										<ul class="list-menu">
-											<!-- Date Approved -->
-											<li class="filter-item">
-												<div class="filter-stack">
-													<div class="filter-label-stack">
-													</div>
-													<div class="filter-input-stack">
-														<div class="filter-inputs">
-														<span class="filter-label row2btn">Date Approved</span>
-
-															<input class="form-control row2btn" type="date" placeholder="Start Date">
-															<span class="filter-between row2btn">Between</span>
-															<input class="form-control row2btn" type="date" placeholder="End Date">
+	<div class="container">
+		<div class="row">
+		  <div class="col">
+			<div class="main">
+				<section class="section-content padding-y ">
+					<div class="container">
+			
+						<div class="row">
+							<!-- Sidebar for Filters with Toggle Features -->
+							<aside class="col-md-3">
+								<div class="card" style="width: 460px;">
+									<h6 class="title text-center">Limit your search</h6>
+		
+									<article class="filter-group">
+										<header class="card-header">
+											<a href="#" class=" " data-bs-toggle="collapse" data-bs-target="#collapse_1" aria-expanded="true">
+												<i class="icon-control fa fa-chevron-down"></i>
+												<h6 class="title">Dates</h6>
+											</a>
+										</header>
+										<div class="filter-content collapse show" id="collapse_1">
+											<div class="card-body">
+												<ul class="list-menu">
+													<!-- Date Approved -->
+													<li class="filter-item">
+														<div class="filter-stack">
+															<div class="filter-label-stack">
+															</div>
+															<div class="filter-input-stack">
+																<div class="filter-inputs">
+																<span class="filter-label row2btn">Date Approved</span>
+		
+																	<input class="form-control row2btn" type="date" placeholder="Start Date">
+																	<span class="filter-between row2btn">Between</span>
+																	<input class="form-control row2btn" type="date" placeholder="End Date">
+																</div>
+																<div class="filter-inputs">
+																<span class="filter-label row2btn">Date Vetoed</span>
+																	<input class="form-control row2btn" type="date" placeholder="Start Date">
+																	<span class="filter-between row2btn">Between</span>
+																	<input class="form-control row2btn" type="date" placeholder="End Date">
+																</div>
+																<div class="filter-inputs">
+																<span class="filter-label row2btn">Date Overwritten</span>
+		
+																	<input class="form-control row2btn" type="date" placeholder="Start Date">
+																	<span class="filter-between row2btn">Between</span>
+																	<input class="form-control row2btn" type="date" placeholder="End Date">
+																</div>
+																<div class="filter-inputs">
+																<span class="filter-label row2btn">Date Assigned</span>
+		
+																	<input class="form-control" type="date" placeholder="Start Date">
+																	<span class="filter-between row2btn">Between</span>
+																	<input class="form-control row2btn" type="date" placeholder="End Date">
+																</div>
+																<div class="filter-inputs">
+																<span class="filter-label row2btn">Date to Senator</span>
+		
+																	<input class="form-control row2btn" type="date" placeholder="Start Date">
+																	<span class="filter-between row2btn">Between</span>
+																	<input class="form-control row2btn" type="date" placeholder="End Date">
+																</div>
+																<div class="filter-inputs">
+																<span class="filter-label row2btn">Date Introduced</span>
+		
+																	<input class="form-control row2btn" type="date" placeholder="Start Date">
+																	<span class="filter-between row2btn">Between</span>
+																	<input class="form-control row2btn" type="date" placeholder="End Date">
+																</div>
+																<div class="filter-inputs">
+																<span class="filter-label row2btn">Date of Governor</span>
+		
+																	<input class="form-control row2btn" type="date" placeholder="Start Date">
+																	<span class="filter-between row2btn">Between</span>
+																	<input class="form-control row2btn" type="date" placeholder="End Date">
+																</div>
+																<div class="filter-inputs">
+																<span class="filter-label row2btn">Date to Lt.Governor</span>
+		
+																	<input class="form-control row2btn" type="date" placeholder="Start Date">
+																	<span class="filter-between row2btn">Between</span>
+																	<input class="form-control row2btn" type="date" placeholder="End Date">
+																</div>
+															</div>
 														</div>
-														<div class="filter-inputs">
-														<span class="filter-label row2btn">Date Vetoed</span>
-															<input class="form-control row2btn" type="date" placeholder="Start Date">
-															<span class="filter-between row2btn">Between</span>
-															<input class="form-control row2btn" type="date" placeholder="End Date">
-														</div>
-														<div class="filter-inputs">
-														<span class="filter-label row2btn">Date Overwritten</span>
-
-															<input class="form-control row2btn" type="date" placeholder="Start Date">
-															<span class="filter-between row2btn">Between</span>
-															<input class="form-control row2btn" type="date" placeholder="End Date">
-														</div>
-														<div class="filter-inputs">
-														<span class="filter-label row2btn">Date Assigned</span>
-
-															<input class="form-control" type="date" placeholder="Start Date">
-															<span class="filter-between row2btn">Between</span>
-															<input class="form-control row2btn" type="date" placeholder="End Date">
-														</div>
-														<div class="filter-inputs">
-														<span class="filter-label row2btn">Date to Senator</span>
-
-															<input class="form-control row2btn" type="date" placeholder="Start Date">
-															<span class="filter-between row2btn">Between</span>
-															<input class="form-control row2btn" type="date" placeholder="End Date">
-														</div>
-														<div class="filter-inputs">
-														<span class="filter-label row2btn">Date Introduced</span>
-
-															<input class="form-control row2btn" type="date" placeholder="Start Date">
-															<span class="filter-between row2btn">Between</span>
-															<input class="form-control row2btn" type="date" placeholder="End Date">
-														</div>
-														<div class="filter-inputs">
-														<span class="filter-label row2btn">Date of Governor</span>
-
-															<input class="form-control row2btn" type="date" placeholder="Start Date">
-															<span class="filter-between row2btn">Between</span>
-															<input class="form-control row2btn" type="date" placeholder="End Date">
-														</div>
-														<div class="filter-inputs">
-														<span class="filter-label row2btn">Date to Lt.Governor</span>
-
-															<input class="form-control row2btn" type="date" placeholder="Start Date">
-															<span class="filter-between row2btn">Between</span>
-															<input class="form-control row2btn" type="date" placeholder="End Date">
-														</div>
-													</div>
-												</div>
-											</li>
-										</ul>
-									</div>
-								</div>
-								
-							</article>
-	
-							<article class="filter-group">
-								<header class="card-header bg-light border-bottom">
-									<a href="#" class="d-flex justify-content-between align-items-center text-dark" data-bs-toggle="collapse" data-bs-target="#collapse_4" aria-expanded="true">
-										<h6 class="title mb-0">Sponsors</h6>
-										<i class="fa fa-chevron-down"></i>
-									</a>
-								</header>
-								
-								<div class="filter-content collapse show" id="collapse_4">
-									<div class="card-body">
-										<!-- Sponsor and Co-Sponsor Checkboxes -->
-										<div class="mb-3">
-											<label class="checkbox-btn d-block">
-												<input type="checkbox" class="me-2">
-												<span >Sponsors</span>
-											</label>
-											<label class="checkbox-btn d-block">
-												<input type="checkbox" class="me-2">
-												<span >Co-Sponsors</span>
-											</label>
-										</div>
-										
-										<!-- Dropdown Filters -->
-										
-										<div class="mb-3">
-											<div class="container drp">
-												<div class="row">
-													<div class="col">
-													  <label class="form-label">Sponsors</label>
-													</div>
-													<div class="col">
-													  <select class="form-select" aria-label="Committee Filter">
-														  <option selected>Choose Sponsor</option>
-														  <option value="1">Sponsor 1</option>
-														  <option value="2">Sponsor 2</option>
-														  <option value="3">Sponsor 3</option>
-													  </select>
-													</div>
-												  </div><div class="row">
-													<div class="col">
-													  <label class="form-label">Committee</label>
-													</div>
-													<div class="col">
-													  <select class="form-select" aria-label="Committee Filter">
-														  <option selected>Choose Committee</option>
-														  <option value="1">Committee 1</option>
-														  <option value="2">Committee 2</option>
-														  <option value="3">Committee 3</option>
-													  </select>
-													</div>
-												  </div>
-											  </div>
-											<div class="filter-item">
+													</li>
+												</ul>
 											</div>
 										</div>
-									</div>
+										
+									</article>
+			
+									<article class="filter-group">
+										<header class="card-header bg-light border-bottom">
+											<a href="#" class="d-flex justify-content-between align-items text-dark" data-bs-toggle="collapse" data-bs-target="#collapse_4" aria-expanded="true">
+												<h6 class="title mb-0">Sponsors</h6>
+												<i class="fa fa-chevron-down"></i>
+											</a>
+										</header>
+										
+										<div class="filter-content collapse show" id="collapse_4">
+											<div class="card-body">
+												<!-- Sponsor and Co-Sponsor Checkboxes -->
+												<div class="mb-3">
+													<label class="checkbox-btn d-block">
+														<input type="checkbox" class="me-2">
+														<span >Sponsors</span>
+													</label>
+													<label class="checkbox-btn d-block">
+														<input type="checkbox" class="me-2">
+														<span >Co-Sponsors</span>
+													</label>
+												</div>
+												
+												<!-- Dropdown Filters -->
+												
+												<div class="mb-3">
+													<div class="container drp">
+														<div class="row">
+															<div class="col">
+															  <label class="form-label">Sponsors</label>
+															</div>
+															<div class="col">
+															  <select class="form-select colmn" aria-label="Committee Filter">
+																  <option selected>Choose Sponsor</option>
+																  <option value="1">Sponsor 1</option>
+																  <option value="2">Sponsor 2</option>
+																  <option value="3">Sponsor 3</option>
+															  </select>
+															</div>
+														  </div><div class="row">
+															<div class="col">
+															  <label class="form-label">Committee</label>
+															</div>
+															<div class="col">
+															  <select class="form-select colmn" aria-label="Committee Filter">
+																  <option selected>Choose Committee</option>
+																  <option value="1">Committee 1</option>
+																  <option value="2">Committee 2</option>
+																  <option value="3">Committee 3</option>
+															  </select>
+															</div>
+														  </div>
+													  </div>
+													<div class="filter-item">
+													</div>
+												</div>
+											</div>
+										</div>
+									</article>
+									
+									
+			
+						
 								</div>
-							</article>
+							</aside>
+			
+							<!-- Main Content Area -->
 							
-							
-	
-				
 						</div>
-					</aside>
-	
-					<!-- Main Content Area -->
-					
+					</div>
+				</section>
+			</div>
+		  </div>
+		  <div class="col">
+			<div class="card hide1" style=" width: 650px; height: 465px; background: #f5f8ff;">
+				<div class="card-body">
+				<div class="bill-label">BILL</div>
+				<div class="bill-number">Bill No - 35-0003</div>
+				<div class="bill-description">
+					An Act appropriating funds for the adoption of various portions of the Virgin Islands Agricultural Plan, submitted by the Agricultural Plan Task Force on December 29, 2021, as the official Agricultural Plan for the Territory
+				</div>
+				<div class="bill-details">
+					<div><span>Sponsor:</span> Nefranci (7)</div>
+					<div><span>Date Introduced:</span> 02-27-2023</div>
+					<div><span>Co-sponsor:</span> (0)</div>
+					<div><span>Committees:</span> GOVSERV</div>
+					<div>
+						<span>Act No.:</span> 8700 <a href="#" class="download-link">Download PDF</a>
+					</div>
+					<div>
+						<span>Resolution No.:</span> 1234 <a href="#" class="download-link">Download PDF</a> | 
+						<span>Amendment No.:</span> 4567 <a href="#" class="download-link">Download PDF</a> | 
+						<span>Governors No.:</span> 3986 <a href="#" class="download-link">Download PDF</a>
+					</div>
+					<div><span>Date Vetoed:</span> </div>
+					<div><span>Date Overridden:</span> </div>
+				</div>
+				<div><span>Status:</span> </div>
+				<div class="status-bar">
+					<div class="status-bar-item active">Assigned</div>
+					<div class="status-bar-item active">Introduced</div>
+					<div class="status-bar-item">Senator</div>
+					<div class="status-bar-item">Committee</div>
+					<div class="status-bar-item">Floor</div>
+					<div class="status-bar-item">Approved</div>
+					<div class="status-bar-item">Lt. Governor</div>
+					<div class="status-bar-item">Governor</div>
 				</div>
 			</div>
-		</section>
-	</div>
-	<div class="bill-container"></div>
-        <div class="bill-label">BILL</div>
-        <div class="bill-number">Bill No - 35-0003</div>
-        <div class="bill-description">
-            An Act appropriating funds for the adoption of various portions of the Virgin Islands Agricultural Plan, submitted by the Agricultural Plan Task Force on December 29, 2021, as the official Agricultural Plan for the Territory
-        </div>
-        <div class="bill-details">
-            <div><span>Sponsor:</span> Nefranci (7)</div>
-            <div><span>Date Introduced:</span> 02-27-2023</div>
-            <div><span>Co-sponsor:</span> (0)</div>
-            <div><span>Committees:</span> GOVSERV</div>
-            <div>
-                <span>Act No.:</span> 8700 <a href="#" class="download-link">Download PDF</a>
-            </div>
-            <div>
-                <span>Resolution No.:</span> 1234 <a href="#" class="download-link">Download PDF</a> | 
-                <span>Amendment No.:</span> 4567 <a href="#" class="download-link">Download PDF</a> | 
-                <span>Governors No.:</span> 3986 <a href="#" class="download-link">Download PDF</a>
-            </div>
-            <div><span>Date Vetoed:</span> </div>
-            <div><span>Date Overridden:</span> </div>
-        </div>
-        <div class="status-container">
-            <div class="status">Assigned</div>
-            <div class="timeline">
-                <div class="timeline-item">Introduced</div>
-                <div class="timeline-item">Senator</div>
-                <div class="timeline-item">Committee</div>
-                <div class="timeline-item">Floor</div>
-                <div class="timeline-item">Approved</div>
-                <div class="timeline-item">Lt. Governor</div>
-                <div class="timeline-item">Governor</div>
-            </div>
-        </div>
-    </div>
+		</div>
+		  </div>
+		  <div class="col">
+			
+		  </div>
+		</div>
+	  </div>
 	
+
+	  </div>
 	<script>
 		$(document).ready(function(){
 			$('#collapse_opt').on('shown.bs.collapse', function () {
@@ -727,7 +928,9 @@ hr {
 			});
 		});
 		</script>
-		
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </body>
 
