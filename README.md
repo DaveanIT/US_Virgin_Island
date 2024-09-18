@@ -11,3 +11,8 @@
 - **Created basic template** 
 -Added Collapsible div 
 -totally beautified
+
+# COMMIT 4
+
+- **Enhanced UI** 
+
